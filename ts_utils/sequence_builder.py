@@ -180,7 +180,8 @@ def sequence_builder(data, n_steps_in, n_steps_out, key_column, x_cols, y_col, y
 def last_year_lag(col): return (col.shift(364) * 0.25) + (col.shift(365) * 0.5) + (col.shift(366) * 0.25)
 
 if __name__ == '__main__':
-    data = reduce_mem_usage(pd.read_pickle('../data/processed_data_test_stdscaler.pkl'))
+    #data = reduce_mem_usage(pd.read_pickle('../data/processed_data_test_stdscaler.pkl'))
+    data = reduce_mem_usage(pd.read_pickle('./data/processed_data_test_stdscaler.pkl'))
     sequence_data = sequence_builder(data, 180, 90, 
         'store_item_id', 
         ['sales', 'dayofweek_sin', 'dayofweek_cos', 'month_sin', 'month_cos', 'year_mod', 'day_sin', 'day_cos'], 
