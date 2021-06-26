@@ -1,3 +1,5 @@
+#!mkdir ./sequence_data
+
 import traceback
 import tqdm
 import numpy as np
