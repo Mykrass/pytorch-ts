@@ -189,4 +189,4 @@ if __name__ == '__main__':
         ['item', 'store', 'date', 'yearly_corr'],
         lag_fns=[last_year_lag]
     )
-    sequence_data.to_pickle('../sequence_data/sequence_data_stdscaler_test.pkl')
+    sequence_data.to_pickle('./sequence_data/sequence_data_stdscaler_test.pkl')
